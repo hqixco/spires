@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Municipalities - SP!RES</title>
-    <script type="module" crossorigin src="/assets/main-aIAw8FPp.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/main-WSercXa3.css">
+    <script type="module" crossorigin src="/assets/main-i1hv83RB.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/main-DxHaNxOr.css">
   </head>
   <body class="solutions-page solution-detail-page">
     <div data-include="/src/partials/header.html"></div>
@@ -31,7 +31,7 @@
           </p>
 
           <div class="solution-detail-hero__panel">
-            <div class="solution-detail-hero__media" aria-hidden="true"></div>
+            <div class="solution-detail-hero__media" data-home-company-bg aria-hidden="true"></div>
             <div class="solution-detail-hero__content">
               <p class="solution-detail-hero__eyebrow">[ Economy ]</p>
               <h2 class="solution-detail-hero__section-title">Economic efficiency for the city budget</h2>
@@ -62,7 +62,7 @@
         </div>
       </section>
 
-      <section class="section-block">
+      <section class="section-block solution-detail-benefits-section">
         <div class="container">
           <header class="section-header">
             <p class="section-label">Advantages</p>
@@ -90,19 +90,30 @@
               <h3>Transparency and accountability</h3>
               <p>detailed PDF report for regulatory authorities</p>
             </article>
-            <article class="solution-detail-benefits__image" aria-hidden="true"></article>
+            <article class="solution-detail-benefits__image" data-solution-detail-benefits-image aria-hidden="true"></article>
           </div>
         </div>
       </section>
 
-      <section class="section-block section-block--alt">
+      <section class="section-block solution-detail-audience-section">
         <div class="container solution-detail-audience">
           <article class="solution-detail-audience__media">
-            <div class="solution-detail-audience__photo" aria-hidden="true"></div>
-            <p class="solution-detail-audience__caption">Connection of private houses to the central sewerage system</p>
-            <div class="solution-detail-audience__controls" aria-hidden="true">
-              <span class="solution-detail-audience__control"></span>
-              <span class="solution-detail-audience__control solution-detail-audience__control--active"></span>
+            <div class="solution-detail-audience__slider" data-solution-detail-audience-slider>
+              <div class="solution-detail-audience__track" data-solution-detail-audience-track>
+                <div class="solution-detail-audience__slide" data-caption="Connection of private houses to the central sewerage system">
+                  <div class="solution-detail-audience__photo" data-solution-detail-audience-photo aria-hidden="true"></div>
+                </div>
+                <div class="solution-detail-audience__slide" data-caption="Municipal maintenance without excavation and long approvals">
+                  <div class="solution-detail-audience__photo" data-solution-detail-audience-photo-alt aria-hidden="true"></div>
+                </div>
+              </div>
+            </div>
+            <div class="solution-detail-audience__footer">
+              <p class="solution-detail-audience__caption" data-solution-detail-audience-caption-target></p>
+              <div class="solution-detail-audience__controls">
+              <button class="solution-detail-audience__control is-active" type="button" data-solution-detail-audience-control="0" aria-label="Slide 1"></button>
+              <button class="solution-detail-audience__control" type="button" data-solution-detail-audience-control="1" aria-label="Slide 2"></button>
+              </div>
             </div>
           </article>
 

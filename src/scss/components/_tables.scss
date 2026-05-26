@@ -35,9 +35,16 @@
   vertical-align: top;
 }
 
+.comparison-table thead {
+  height: 64px;
+}
+
 .comparison-table thead th {
-  background: rgba(0, 62, 96, 0.05);
+  background: #DCEDFF;
   color: var(--color-dark-blue);
+  font-size: 24px;
+  font-family: var(--font-heading);
+  font-weight: 600;
 }
 
 .site-map__table th,
@@ -71,7 +78,7 @@
 .comparison-table tbody th,
 .specs-table tbody th {
   color: var(--color-dark-blue);
-  font-weight: 600;
+  font-weight:400;
   width: 28%;
 }
 

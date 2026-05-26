@@ -8,6 +8,10 @@ const siteLogo = new URL('../images/spires-logo.svg', import.meta.url).href;
 const homeTechBackground = new URL('../images/home-tech-visual-bg.jpg', import.meta.url).href;
 const homeCompanyBackground = new URL('../images/home-company-visual-bg.jpg', import.meta.url).href;
 const homeProjectsImage = new URL('../images/home-projects-image.jpg', import.meta.url).href;
+const pageHeroBackground = new URL('../images/page-hero-bg.jpg', import.meta.url).href;
+const technologyStepVisualImage = new URL('../images/technology-step-visual-image.jpg', import.meta.url).href;
+const solutionDetailBenefitsImage = new URL('../images/solution-detail-benefits-image.jpg', import.meta.url).href;
+const solutionDetailAudiencePhoto = new URL('../images/solution-detail-audience-photo.jpg', import.meta.url).href;
 const googleIcon = new URL('../images/google-icon.svg', import.meta.url).href;
 const phoneIcon = new URL('../images/phone-icon.svg', import.meta.url).href;
 const mailIcon = new URL('../images/mail-icon.svg', import.meta.url).href;
@@ -46,10 +50,45 @@ async function bootstrap() {
     image.src = homeTechBackground;
   });
   document.querySelectorAll('[data-home-company-bg]').forEach((image) => {
-    image.src = homeCompanyBackground;
+    if (image instanceof HTMLImageElement) {
+      image.src = homeCompanyBackground;
+      return;
+    }
+
+    image.style.setProperty('--home-company-bg-image', `url("${homeCompanyBackground}")`);
   });
   document.querySelectorAll('[data-home-projects-image]').forEach((image) => {
     image.src = homeProjectsImage;
+  });
+  document.querySelectorAll('[data-page-hero-bg]').forEach((image) => {
+    image.src = pageHeroBackground;
+  });
+  document.querySelectorAll('[data-technology-step-visual-image]').forEach((image) => {
+    image.src = technologyStepVisualImage;
+  });
+  document.querySelectorAll('[data-solution-detail-benefits-image]').forEach((image) => {
+    if (image instanceof HTMLImageElement) {
+      image.src = solutionDetailBenefitsImage;
+      return;
+    }
+
+    image.style.setProperty('--solution-detail-benefits-image', `url("${solutionDetailBenefitsImage}")`);
+  });
+  document.querySelectorAll('[data-solution-detail-audience-photo]').forEach((image) => {
+    if (image instanceof HTMLImageElement) {
+      image.src = solutionDetailAudiencePhoto;
+      return;
+    }
+
+    image.style.setProperty('--solution-detail-audience-photo', `url("${solutionDetailAudiencePhoto}")`);
+  });
+  document.querySelectorAll('[data-solution-detail-audience-photo-alt]').forEach((image) => {
+    if (image instanceof HTMLImageElement) {
+      image.src = homeCompanyBackground;
+      return;
+    }
+
+    image.style.setProperty('--solution-detail-audience-photo', `url("${homeCompanyBackground}")`);
   });
   document.querySelectorAll('[data-google-icon]').forEach((icon) => {
     icon.src = googleIcon;
