@@ -1,0 +1,19 @@
+.container {
+  width: min(100%, var(--container-max));
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.section-block {
+  padding: 88px 0;
+}
+
+@media (max-width: 720px) {
+  .container {
+    width: min(calc(100% - 24px), var(--container-max));
+  }
+
+  .section-block {
+    padding: 64px 0;
+  }
+}

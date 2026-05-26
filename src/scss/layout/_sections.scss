@@ -1,0 +1,227 @@
+.app-main {
+  flex: 1;
+}
+
+.section-header {
+  display: grid;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.site-map-page .section-header {
+  margin-bottom: 50px;
+}
+
+.section-title {
+  margin: 0;
+  font-size: 40px;
+  line-height: 1;
+}
+
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  padding: 0;
+  border-radius: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 0;
+  text-transform: none;
+  color: #99A3AA;
+  background: transparent;
+}
+
+.section-label::before,
+.section-label::after {
+  font-size: 0.9em;
+  line-height: 1;
+  color: inherit;
+}
+
+.section-label::before {
+  content: '[';
+  margin-right: 0.22em;
+}
+
+.section-label::after {
+  content: ']';
+  margin-left: 0.22em;
+}
+
+.section-text {
+  max-width: 56rem;
+  font-size: 1.125rem;
+  line-height: 1.2;
+  color: #333333;
+}
+
+.card--soft {
+  background: var(--color-light-gray);
+  border: 0;
+  box-shadow: none;
+}
+
+.application-section {
+  padding-bottom: 0;
+}
+
+.application-section__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 700px;
+  gap: 28px;
+  align-items: stretch;
+  border-radius: var(--radius-section);
+  background: linear-gradient(135deg, rgba(2, 77, 111, 0.98), rgba(27, 99, 129, 0.88));
+  padding: 40px 60px;
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+}
+
+.application-section__copy,
+.application-section .section-title,
+.application-section .section-text {
+  color: var(--color-white);
+}
+
+.application-section__copy {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 100%;
+}
+
+.application-section__copy .section-label {
+  color: #99a3aa;
+  font-size: 14px;
+}
+
+.application-section__copy .section-title {
+  font-size: 40px;
+  line-height: 0.92;
+}
+
+.application-section__copy .section-text {
+  font-size: 16px;
+  line-height: 1.24;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.application-section__contacts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: auto;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.application-section__contact {
+  display: inline-flex;
+  align-items: center;
+}
+
+.application-section__contacts a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 20px;
+  line-height: 44px;
+  border-radius: 10px;
+  background: var(--color-white);
+  color: var(--color-dark-blue);
+  font-size: 16px;
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+
+.application-section__contacts a::before {
+  content: '';
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  background: center / 24px 24px no-repeat;
+}
+
+.application-section__contact--phone a::before {
+  background-image: url('/src/images/phone-icon.svg');
+}
+
+.application-section__contact--mail a::before {
+  background-image: url('/src/images/mail-icon.svg');
+}
+
+.application-section .contact-form {
+  padding: 0;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  gap: 20px;
+}
+
+.application-section .contact-form label {
+  color: var(--color-white);
+  gap: 5px;
+  font-size: 0.68rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.application-section .contact-form input:not([type='checkbox']),
+.application-section .contact-form textarea {
+  min-height: 50px;
+  padding: 6px 20px;
+  border-color: #e4e7ea;
+  background: rgba(255, 255, 255, 0.02);
+  color: #fff;
+  font-size: 16px;
+}
+
+.application-section .contact-form input:not([type='checkbox'])::placeholder,
+.application-section .contact-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.application-section .contact-form input:not([type='checkbox']):focus,
+.application-section .contact-form textarea:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 2px rgba(253, 157, 0, 0.12);
+}
+
+.application-section .contact-form__consent {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.54rem;
+  line-height: 1.2;
+}
+
+.application-section .contact-form .button {
+  width: 100%;
+  min-height: 60px;
+  padding-block: 10px;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+@media (max-width: 1200px) {
+  .application-section__inner {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .application-section__inner {
+    padding: 18px;
+  }
+
+  .application-section__copy {
+    padding: 0;
+  }
+
+  .application-section__contacts {
+    margin-top: 10px;
+  }
+}

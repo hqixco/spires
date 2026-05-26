@@ -1,0 +1,296 @@
+.contacts-detail-page .page-breadcrumbs {
+  padding-top: 16px;
+}
+
+.contacts-detail-page__hero {
+  padding-top: 30px;
+  padding-bottom: 34px;
+}
+
+.contacts-detail-page__hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.contacts-detail-page__content {
+  display: grid;
+  gap: 22px;
+  align-content: start;
+  padding-top: 12px;
+}
+
+.contacts-detail-page__title {
+  margin: 0 0 4px;
+  font-family: var(--font-heading);
+  font-size: clamp(3rem, 4.8vw, 4.2rem);
+  line-height: 0.92;
+  text-transform: uppercase;
+  color: #333333;
+}
+
+.contacts-detail-page__group {
+  display: grid;
+  gap: 6px;
+}
+
+.contacts-detail-page__label {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #333333;
+}
+
+.contacts-detail-page__text {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.3;
+  color: #4a4a4a;
+}
+
+.contacts-detail-page__map {
+  position: relative;
+  min-height: 620px;
+  overflow: hidden;
+  border-radius: 0;
+  background: #f4f1eb;
+}
+
+.contacts-detail-page__map-layer {
+  position: absolute;
+  inset: 0;
+}
+
+.contacts-detail-page__map-layer--land {
+  background:
+    radial-gradient(circle at 21% 80%, rgba(174, 220, 145, 0.82), transparent 16%),
+    radial-gradient(circle at 34% 56%, rgba(171, 217, 140, 0.78), transparent 12%),
+    radial-gradient(circle at 68% 82%, rgba(171, 217, 140, 0.75), transparent 17%),
+    radial-gradient(circle at 78% 43%, rgba(180, 222, 145, 0.76), transparent 14%),
+    radial-gradient(circle at 53% 75%, rgba(0, 118, 255, 0.08), transparent 8%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.78), rgba(255, 255, 255, 0.2));
+}
+
+.contacts-detail-page__map-layer--roads {
+  background:
+    linear-gradient(12deg, transparent 0 6%, rgba(170, 190, 214, 0.9) 6% 6.8%, transparent 6.8% 14%, rgba(170, 190, 214, 0.85) 14% 14.7%, transparent 14.7% 24%, rgba(170, 190, 214, 0.88) 24% 25%, transparent 25% 100%),
+    linear-gradient(155deg, transparent 0 16%, rgba(170, 190, 214, 0.88) 16% 16.8%, transparent 16.8% 34%, rgba(170, 190, 214, 0.8) 34% 34.7%, transparent 34.7% 100%),
+    linear-gradient(78deg, transparent 0 12%, rgba(170, 190, 214, 0.92) 12% 12.7%, transparent 12.7% 22%, rgba(170, 190, 214, 0.84) 22% 22.7%, transparent 22.7% 100%);
+  opacity: 0.85;
+  filter: blur(0.2px);
+}
+
+.contacts-detail-page__map-layer--roads::before,
+.contacts-detail-page__map-layer--roads::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
+.contacts-detail-page__map-layer--roads::before {
+  background:
+    linear-gradient(95deg, transparent 0 30%, rgba(255, 255, 255, 0.8) 30% 30.6%, transparent 30.6% 100%),
+    linear-gradient(0deg, transparent 0 24%, rgba(255, 255, 255, 0.9) 24% 24.5%, transparent 24.5% 100%);
+  opacity: 0.62;
+}
+
+.contacts-detail-page__map-layer--roads::after {
+  background:
+    radial-gradient(circle at 72% 18%, rgba(255, 255, 255, 0.9), transparent 3%),
+    radial-gradient(circle at 41% 44%, rgba(255, 255, 255, 0.92), transparent 2.8%),
+    radial-gradient(circle at 33% 67%, rgba(255, 255, 255, 0.9), transparent 2.6%),
+    radial-gradient(circle at 58% 29%, rgba(255, 255, 255, 0.86), transparent 2.6%),
+    radial-gradient(circle at 82% 71%, rgba(255, 255, 255, 0.88), transparent 2.6%);
+}
+
+.contacts-detail-page__map-layer--labels {
+  background:
+    radial-gradient(circle at 48% 54%, transparent 0 8%, rgba(0, 0, 0, 0.04) 8% 8.8%, transparent 8.8% 100%),
+    linear-gradient(0deg, transparent 0 100%);
+}
+
+.contacts-detail-page__map-layer--labels::before,
+.contacts-detail-page__map-layer--labels::after {
+  position: absolute;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  color: #4b4b4b;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.45);
+  padding: 2px 4px;
+}
+
+.contacts-detail-page__map-layer--labels::before {
+  content: 'Frankfurt am Main';
+  top: 10%;
+  right: 18%;
+}
+
+.contacts-detail-page__map-layer--labels::after {
+  content: 'Walldorf';
+  top: 63%;
+  left: 47%;
+}
+
+.contacts-detail-page__map-layer--marker::before {
+  content: '';
+  position: absolute;
+  left: 46%;
+  top: 50%;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #1f62d0;
+  box-shadow:
+    0 0 0 8px rgba(31, 98, 208, 0.12),
+    0 0 0 16px rgba(31, 98, 208, 0.06);
+}
+
+.contacts-detail-page__partners {
+  padding-top: 16px;
+}
+
+.contacts-detail-page__partners-panel {
+  padding: 24px 22px 24px;
+  border-radius: 18px;
+  background: #edf1f4;
+}
+
+.contacts-detail-page__eyebrow {
+  margin: 0 0 8px;
+  font-size: 0.84rem;
+  line-height: 1;
+  color: #b2b8bf;
+}
+
+.contacts-detail-page__partners-title {
+  max-width: 20ch;
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  line-height: 0.95;
+  text-transform: uppercase;
+  color: #333333;
+}
+
+.contacts-detail-page__partners-text {
+  max-width: 80rem;
+  margin: 12px 0 20px;
+  font-size: 0.96rem;
+  line-height: 1.28;
+  color: #4b4b4b;
+}
+
+.contacts-detail-page__partners-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.partner-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 84px;
+  padding: 10px 12px;
+  border-radius: 16px;
+  background: #ffffff;
+}
+
+.partner-logo__mark {
+  position: relative;
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 56px;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #143e75 0%, #102f57 100%);
+  color: #ffffff;
+  font-family: var(--font-heading);
+  font-size: 1rem;
+}
+
+.partner-logo__mark::before {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 8px;
+  bottom: 8px;
+  width: 8px;
+  border-radius: 999px;
+  background:
+    linear-gradient(180deg, transparent 0 14%, #ff4d44 14% 20%, transparent 20% 78%, #ff4d44 78% 84%, transparent 84% 100%),
+    linear-gradient(180deg, #1fb5e9, #1f8ccf);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.22);
+}
+
+.partner-logo__copy {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+  color: #0f3d73;
+}
+
+.partner-logo__copy strong {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  line-height: 0.95;
+  color: #163e6b;
+}
+
+.partner-logo__copy small {
+  font-size: 0.68rem;
+  line-height: 1.1;
+  color: #3f76a9;
+}
+
+@media (max-width: 1200px) {
+  .contacts-detail-page__hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contacts-detail-page__map {
+    min-height: 420px;
+  }
+
+  .contacts-detail-page__partners-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .contacts-detail-page__hero {
+    padding-top: 22px;
+    padding-bottom: 28px;
+  }
+
+  .contacts-detail-page__title {
+    font-size: 2.6rem;
+  }
+
+  .contacts-detail-page__content {
+    gap: 18px;
+  }
+
+  .contacts-detail-page__map {
+    min-height: 300px;
+  }
+
+  .contacts-detail-page__partners-panel {
+    padding: 18px;
+  }
+
+  .contacts-detail-page__partners-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .partner-logo {
+    min-height: 72px;
+    padding: 8px 10px;
+  }
+}

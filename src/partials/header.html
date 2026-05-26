@@ -1,0 +1,67 @@
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="brand" href="/main.html" aria-label="SP!RES home">
+      <img
+        class="brand__image"
+        data-site-logo
+        src="data:image/gif;base64,R0lGODlhAQABAAAAACw="
+        alt="SP!RES"
+        width="183"
+        height="47"
+      />
+    </a>
+
+    <button
+      class="site-header__toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+      data-menu-toggle
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+      <span class="visually-hidden">Open menu</span>
+    </button>
+
+    <nav class="site-nav" aria-label="Main navigation">
+      <a class="site-nav__link" href="/src/pages/technology.html">Technology</a>
+      <a class="site-nav__link" href="/src/pages/solutions.html">Solutions</a>
+      <a class="site-nav__link" href="/src/pages/materials.html">Materials</a>
+      <a class="site-nav__link" href="/src/pages/training.html">Training</a>
+      <a class="site-nav__link" href="/src/pages/cases.html">Cases</a>
+      <a class="site-nav__link" href="/src/pages/contacts.html">Contacts</a>
+      <a class="site-nav__link" href="/src/pages/articles.html">Articles</a>
+    </nav>
+
+    <div class="site-header__actions" aria-label="Contacts and social links">
+      <a class="site-header__chip" href="tel:+4963120561100">
+        <img data-phone-icon src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="" aria-hidden="true" width="16" height="16" loading="lazy" />
+        <span>+49 631 20561-100</span>
+      </a>
+      <a class="site-header__chip" href="mailto:info@brawosystems.com">
+        <img data-mail-icon src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="" aria-hidden="true" width="16" height="16" loading="lazy" />
+        <span>info@brawosystems.com</span>
+      </a>
+      <div class="site-header__socials" aria-label="Social links">
+        <a class="site-header__social" href="#" aria-label="Google">
+          <img data-google-icon src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="" aria-hidden="true" width="19" height="20" loading="lazy" />
+        </a>
+        <a class="site-header__social" href="#" aria-label="Telegram">
+          <img data-telegram-icon src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="" aria-hidden="true" width="26" height="22" loading="lazy" />
+        </a>
+        <a class="site-header__social" href="#" aria-label="WhatsApp">
+          <img data-whatsapp-icon src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="" aria-hidden="true" width="24" height="24" loading="lazy" />
+        </a>
+      </div>
+      <div class="site-nav__lang" aria-label="Language switch">
+        <button class="site-nav__lang-toggle" type="button" aria-pressed="false" data-lang-toggle>
+          <span class="site-nav__lang-option site-nav__lang-option--left">Eng</span>
+          <span class="site-nav__lang-option site-nav__lang-option--right">Deu</span>
+          <span class="site-nav__lang-thumb" aria-hidden="true"></span>
+        </button>
+      </div>
+    </nav>
+  </div>
+  <div data-include="/src/partials/mobile-menu.html"></div>
+</header>

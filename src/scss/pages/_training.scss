@@ -1,0 +1,443 @@
+.training-detail-page .page-breadcrumbs {
+  padding-top: 16px;
+}
+
+.training-detail-page__hero {
+  padding-top: 30px;
+  padding-bottom: 34px;
+}
+
+.training-detail-page__hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.02fr) minmax(0, 0.98fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.training-detail-page__content {
+  display: grid;
+  gap: 12px;
+  align-content: start;
+  padding-top: 6px;
+}
+
+.training-detail-page__title {
+  max-width: 12ch;
+  margin: 0 0 2px;
+  font-family: var(--font-heading);
+  font-size: clamp(3rem, 4.8vw, 4.2rem);
+  line-height: 0.92;
+  text-transform: uppercase;
+  color: #333333;
+}
+
+.training-detail-page__lead {
+  max-width: 44rem;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.24;
+  color: #4a4a4a;
+}
+
+.training-detail-page__section-label,
+.training-detail-page__eyebrow {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #333333;
+}
+
+.training-detail-page__eyebrow {
+  margin: 0 0 8px;
+  font-size: 0.82rem;
+  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.training-detail-page__eyebrow--dark {
+  color: #b5bdc3;
+}
+
+.training-detail-page__list {
+  display: grid;
+  gap: 14px;
+  margin: 0;
+  padding: 4px 0 2px;
+  list-style: none;
+}
+
+.training-detail-page__list li {
+  position: relative;
+  padding-left: 24px;
+  font-size: 0.98rem;
+  line-height: 1.25;
+  color: #4a4a4a;
+}
+
+.training-detail-page__list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.34em;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid #ff9900;
+  background: #fff;
+}
+
+.training-detail-page__button {
+  width: fit-content;
+  min-width: 233px;
+  margin-top: 2px;
+}
+
+.training-detail-page__visual {
+  min-height: 406px;
+}
+
+.training-detail-page__visual-frame {
+  position: relative;
+  min-height: 406px;
+  overflow: hidden;
+  border-radius: 20px;
+  background:
+    radial-gradient(circle at 12% 16%, rgba(255, 148, 0, 0.28), transparent 12%),
+    radial-gradient(circle at 82% 18%, rgba(0, 180, 255, 0.34), transparent 18%),
+    linear-gradient(180deg, rgba(5, 10, 18, 0.98), rgba(8, 17, 28, 0.98));
+  box-shadow: 0 16px 34px rgba(0, 62, 96, 0.12);
+}
+
+.training-detail-page__visual-frame::before,
+.training-detail-page__visual-frame::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
+.training-detail-page__visual-frame::before {
+  background:
+    linear-gradient(90deg, transparent 0 10%, rgba(20, 164, 232, 0.52) 10% 10.4%, transparent 10.4% 22%, rgba(255, 151, 0, 0.38) 22% 22.4%, transparent 22.4% 36%, rgba(20, 164, 232, 0.44) 36% 36.4%, transparent 36.4% 54%, rgba(255, 151, 0, 0.34) 54% 54.4%, transparent 54.4% 73%, rgba(20, 164, 232, 0.46) 73% 73.4%, transparent 73.4% 100%),
+    linear-gradient(0deg, transparent 0 14%, rgba(255, 151, 0, 0.4) 14% 14.4%, transparent 14.4% 28%, rgba(20, 164, 232, 0.34) 28% 28.4%, transparent 28.4% 42%, rgba(255, 151, 0, 0.28) 42% 42.4%, transparent 42.4% 58%, rgba(20, 164, 232, 0.3) 58% 58.4%, transparent 58.4% 74%, rgba(255, 151, 0, 0.24) 74% 74.4%, transparent 74.4% 100%);
+  opacity: 0.9;
+}
+
+.training-detail-page__visual-frame::after {
+  background:
+    radial-gradient(circle at 24% 72%, rgba(0, 200, 255, 0.24), transparent 12%),
+    radial-gradient(circle at 62% 28%, rgba(0, 200, 255, 0.2), transparent 11%),
+    radial-gradient(circle at 78% 62%, rgba(255, 151, 0, 0.14), transparent 12%);
+}
+
+.training-detail-page__visual-core {
+  position: absolute;
+  inset: 10% 5% 9% 5%;
+  border-radius: 16px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.06), transparent 14%),
+    linear-gradient(90deg, transparent 0 22%, rgba(0, 182, 255, 0.56) 22% 22.5%, transparent 22.5% 38%, rgba(0, 182, 255, 0.22) 38% 38.5%, transparent 38.5% 56%, rgba(253, 157, 0, 0.38) 56% 56.5%, transparent 56.5% 74%, rgba(0, 182, 255, 0.3) 74% 74.5%, transparent 74.5% 100%),
+    linear-gradient(0deg, transparent 0 20%, rgba(253, 157, 0, 0.36) 20% 20.5%, transparent 20.5% 48%, rgba(0, 182, 255, 0.34) 48% 48.5%, transparent 48.5% 100%);
+  opacity: 0.75;
+  filter: saturate(1.1);
+}
+
+.training-detail-page__visual-core::before,
+.training-detail-page__visual-core::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
+.training-detail-page__visual-core::before {
+  background:
+    linear-gradient(180deg, transparent 0 12%, rgba(32, 157, 211, 0.62) 12% 12.4%, transparent 12.4% 100%),
+    linear-gradient(90deg, transparent 0 16%, rgba(255, 147, 0, 0.32) 16% 16.5%, transparent 16.5% 100%);
+  opacity: 0.8;
+}
+
+.training-detail-page__visual-core::after {
+  background:
+    radial-gradient(circle at 64% 80%, rgba(0, 210, 255, 0.55), transparent 12%),
+    radial-gradient(circle at 22% 76%, rgba(0, 210, 255, 0.38), transparent 16%),
+    linear-gradient(150deg, transparent 0 48%, rgba(0, 210, 255, 0.34) 48% 52%, transparent 52% 100%);
+  transform: skewX(-14deg);
+}
+
+.training-detail-page__formats {
+  padding-top: 10px;
+}
+
+.training-detail-page__formats-panel {
+  padding: 20px 20px 18px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #0d577b 0%, #1f6b8d 52%, #7499ac 100%);
+}
+
+.training-detail-page__panel-title {
+  max-width: 20ch;
+  margin: 0 auto 10px;
+  font-family: var(--font-heading);
+  font-size: clamp(1.95rem, 3vw, 2.75rem);
+  line-height: 0.95;
+  text-transform: uppercase;
+  text-align: center;
+  color: #ffffff;
+}
+
+.training-detail-page__panel-text {
+  max-width: 52rem;
+  margin: 0 auto 18px;
+  font-size: 0.94rem;
+  line-height: 1.26;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.training-detail-page__formats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.training-card {
+  position: relative;
+  display: grid;
+  gap: 10px;
+  align-content: start;
+  min-height: 360px;
+  padding: 18px 14px 14px;
+  border-radius: 8px;
+  background: #d8e9fb;
+  color: #3d3d3d;
+}
+
+.training-card__index {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #0f5376;
+  color: #ffffff;
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  line-height: 1;
+}
+
+.training-card__title {
+  margin: 0;
+  max-width: 18ch;
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  line-height: 0.95;
+  text-transform: uppercase;
+  color: #333333;
+}
+
+.training-card__text {
+  margin: 0;
+  font-size: 0.77rem;
+  line-height: 1.22;
+  color: #4c4c4c;
+}
+
+.training-card__label {
+  margin: 2px 0 0;
+  font-family: var(--font-heading);
+  font-size: 0.98rem;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #333333;
+}
+
+.training-detail-page__investment {
+  padding-top: 52px;
+}
+
+.training-detail-page__investment-header {
+  display: grid;
+  gap: 10px;
+  max-width: 58rem;
+  margin-bottom: 14px;
+}
+
+.training-detail-page__investment-title {
+  max-width: 18ch;
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 3.1vw, 2.8rem);
+  line-height: 0.96;
+  text-transform: uppercase;
+  color: #333333;
+}
+
+.training-detail-page__investment-text {
+  max-width: 60rem;
+  margin: 0;
+  font-size: 0.96rem;
+  line-height: 1.24;
+  color: #4b4b4b;
+}
+
+.training-detail-page__benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.training-benefit {
+  min-height: 126px;
+  padding: 18px 14px 14px;
+  border-radius: 8px;
+  background: #d8e9fb;
+}
+
+.training-benefit__title {
+  margin: 0 0 8px;
+  max-width: 12ch;
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  line-height: 0.95;
+  text-transform: uppercase;
+  color: #333333;
+}
+
+.training-benefit__text {
+  margin: 0;
+  font-size: 0.8rem;
+  line-height: 1.18;
+  color: #4d4d4d;
+}
+
+.training-detail-page__support {
+  padding-top: 48px;
+}
+
+.training-detail-page__support-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr);
+  gap: 20px;
+  align-items: start;
+}
+
+.training-detail-page__support-copy {
+  display: grid;
+  gap: 12px;
+  align-content: start;
+  padding-top: 4px;
+}
+
+.training-detail-page__support-title {
+  max-width: 15ch;
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 3vw, 2.75rem);
+  line-height: 0.95;
+  text-transform: uppercase;
+  color: #333333;
+}
+
+.training-detail-page__support-text {
+  max-width: 26rem;
+  margin: 0 0 8px;
+  font-size: 0.96rem;
+  line-height: 1.24;
+  color: #4b4b4b;
+}
+
+.training-detail-page__support-grid-items {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.training-support-card {
+  position: relative;
+  min-height: 150px;
+  padding: 18px 16px 14px 16px;
+  border-radius: 8px;
+  background: #eceff1;
+}
+
+.training-support-card__index {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #0f5376;
+  color: #ffffff;
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  line-height: 1;
+}
+
+.training-support-card__title {
+  margin: 14px 0 6px;
+  max-width: 15ch;
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  line-height: 0.95;
+  text-transform: uppercase;
+  color: #333333;
+}
+
+.training-support-card__text {
+  margin: 0;
+  font-size: 0.8rem;
+  line-height: 1.18;
+  color: #4d4d4d;
+}
+
+@media (max-width: 1200px) {
+  .training-detail-page__hero-grid,
+  .training-detail-page__support-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .training-detail-page__visual,
+  .training-detail-page__visual-frame {
+    min-height: 340px;
+  }
+
+  .training-detail-page__formats-grid,
+  .training-detail-page__benefits-grid,
+  .training-detail-page__support-grid-items {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .training-detail-page__hero {
+    padding-top: 22px;
+    padding-bottom: 28px;
+  }
+
+  .training-detail-page__title {
+    font-size: 2.6rem;
+  }
+
+  .training-detail-page__formats-panel {
+    padding: 16px;
+  }
+
+  .training-card,
+  .training-benefit,
+  .training-support-card {
+    min-height: 0;
+  }
+
+  .training-card__title,
+  .training-benefit__title,
+  .training-support-card__title {
+    font-size: 1.05rem;
+  }
+
+  .training-detail-page__button {
+    width: 100%;
+    min-width: 0;
+  }
+}
