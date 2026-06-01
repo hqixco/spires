@@ -468,6 +468,177 @@ export function initSliders() {
     snapToIndex(0, false);
   });
 
+  document.querySelectorAll('[data-case-detail-stage-slider]').forEach((slider) => {
+    const track = slider.querySelector('[data-case-detail-stage-track]');
+    const slides = Array.from(slider.querySelectorAll('.case-detail-stage__slide'));
+    const prevButtons = Array.from(slider.closest('.case-detail-stage')?.querySelectorAll('[data-case-detail-stage-prev]') || []);
+    const nextButtons = Array.from(slider.closest('.case-detail-stage')?.querySelectorAll('[data-case-detail-stage-next]') || []);
+    const dotsWrap = slider.closest('.case-detail-stage')?.querySelector('[data-case-detail-stage-dots]');
+
+    if (!track || slides.length < 2) return;
+
+    let resizeRaf = 0;
+    let isDragging = false;
+    let hasDragged = false;
+    let dragStartX = 0;
+    let dragOffset = 0;
+    let activePointerId = null;
+    let suppressClick = false;
+    let currentIndex = 0;
+    const dots = [];
+
+    if (dotsWrap) {
+      dotsWrap.innerHTML = '';
+      slides.forEach((_, slideIndex) => {
+        const dot = document.createElement('button');
+        dot.type = 'button';
+        dot.className = 'case-detail-stage__dot';
+        dot.setAttribute('aria-label', `Go to stage ${slideIndex + 1}`);
+        dot.setAttribute('data-case-detail-stage-dot', '');
+        dot.addEventListener('click', () => {
+          snapToIndex(slideIndex, true);
+        });
+        dotsWrap.appendChild(dot);
+        dots.push(dot);
+      });
+    }
+
+    const getMaxIndex = () => Math.max(0, slides.length - 1);
+    const clampIndex = (index) => Math.max(0, Math.min(getMaxIndex(), index));
+
+    const applyTransform = (index, { animate = true, offset = 0 } = {}) => {
+      const slide = slides[clampIndex(index)];
+      if (!slide) return;
+
+      track.style.transition = animate ? '' : 'none';
+      track.style.transform = `translate3d(${-(slide.offsetLeft) + offset}px, 0, 0)`;
+    };
+
+    const updateState = () => {
+      const canScroll = getMaxIndex() > 0;
+
+      slides.forEach((slide, slideIndex) => {
+        const isActive = slideIndex === currentIndex;
+        slide.classList.toggle('is-active', isActive);
+        slide.setAttribute('aria-hidden', String(!isActive));
+        slide.toggleAttribute('inert', !isActive);
+      });
+
+      prevButtons.forEach((button) => {
+        button.classList.toggle('is-disabled', !canScroll || currentIndex <= 0);
+      });
+
+      nextButtons.forEach((button) => {
+        button.classList.toggle('is-disabled', !canScroll || currentIndex >= getMaxIndex());
+      });
+
+      dots.forEach((dot, dotIndex) => {
+        dot.classList.toggle('is-active', dotIndex === currentIndex);
+        dot.setAttribute('aria-current', dotIndex === currentIndex ? 'true' : 'false');
+      });
+    };
+
+    const scrollByStep = (direction) => {
+      snapToIndex(currentIndex + direction, true);
+    };
+
+    const snapToIndex = (index, animate = true) => {
+      currentIndex = clampIndex(index);
+      dragOffset = 0;
+      applyTransform(currentIndex, { animate });
+      updateState();
+    };
+
+    const stopDragging = () => {
+      if (!isDragging) return;
+
+      isDragging = false;
+      activePointerId = null;
+      track.classList.remove('is-dragging');
+
+      if (hasDragged) {
+        suppressClick = true;
+        window.setTimeout(() => {
+          suppressClick = false;
+        }, 0);
+      }
+
+      const slide = slides[clampIndex(currentIndex)];
+      const slideWidth = slide?.clientWidth || track.clientWidth || 0;
+      const threshold = Math.min(80, Math.max(28, slideWidth * 0.2));
+      const nextIndex = dragOffset < -threshold ? currentIndex + 1 : dragOffset > threshold ? currentIndex - 1 : currentIndex;
+
+      snapToIndex(nextIndex, true);
+      hasDragged = false;
+      dragOffset = 0;
+    };
+
+    track.addEventListener('pointerdown', (event) => {
+      if (event.button !== 0 && event.pointerType === 'mouse') return;
+
+      isDragging = true;
+      hasDragged = false;
+      dragStartX = event.clientX;
+      dragOffset = 0;
+      activePointerId = event.pointerId;
+      track.classList.add('is-dragging');
+      track.setPointerCapture(event.pointerId);
+      event.preventDefault();
+    });
+
+    track.addEventListener('pointermove', (event) => {
+      if (!isDragging || event.pointerId !== activePointerId) return;
+
+      const deltaX = event.clientX - dragStartX;
+      if (Math.abs(deltaX) > 4) {
+        hasDragged = true;
+      }
+
+      dragOffset = deltaX;
+      applyTransform(currentIndex, { animate: false, offset: deltaX });
+
+      if (hasDragged) {
+        event.preventDefault();
+      }
+    });
+
+    track.addEventListener('pointerup', stopDragging);
+    track.addEventListener('pointercancel', stopDragging);
+    track.addEventListener('lostpointercapture', stopDragging);
+    track.addEventListener('dragstart', (event) => {
+      event.preventDefault();
+    });
+    track.addEventListener('click', (event) => {
+      if (!suppressClick) return;
+
+      event.preventDefault();
+      event.stopPropagation();
+    }, true);
+
+    prevButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        scrollByStep(-1);
+      });
+    });
+
+    nextButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        scrollByStep(1);
+      });
+    });
+
+    window.addEventListener('resize', () => {
+      if (resizeRaf) return;
+
+      resizeRaf = window.requestAnimationFrame(() => {
+        resizeRaf = 0;
+        snapToIndex(currentIndex, false);
+      });
+    });
+
+    snapToIndex(0, false);
+  });
+
   document.querySelectorAll('[data-technology-certificates-slider]').forEach((slider) => {
     const section = slider.closest('.technology-certificates');
     const track = slider.querySelector('[data-technology-certificates-track]');

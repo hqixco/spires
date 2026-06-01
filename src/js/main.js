@@ -60,6 +60,9 @@ async function bootstrap() {
   document.querySelectorAll('[data-home-projects-image]').forEach((image) => {
     image.src = homeProjectsImage;
   });
+  document.querySelectorAll('[data-case-card-image]').forEach((image) => {
+    image.src = homeProjectsImage;
+  });
   document.querySelectorAll('[data-page-hero-bg]').forEach((image) => {
     image.src = pageHeroBackground;
   });
@@ -117,6 +120,32 @@ async function bootstrap() {
   document.querySelectorAll('[data-technology-certificate-image]').forEach((image) => {
     image.src = technologyCertificateImage;
   });
+  const casesMoreButton = document.querySelector('[data-cases-more-button]');
+  if (casesMoreButton) {
+    const casesGrid = document.querySelector('.cases-page__grid');
+    const getHiddenCases = () =>
+      casesGrid
+        ? [...casesGrid.querySelectorAll('[data-cases-card-hidden], .case-card--is-hidden')].filter(
+            (card) => card.hidden || card.classList.contains('case-card--is-hidden') || card.hasAttribute('data-cases-card-hidden'),
+          )
+        : [];
+    const updateCasesButtonVisibility = () => {
+      const hasHiddenCases = getHiddenCases().length > 0;
+      casesMoreButton.classList.toggle('is-hidden', !hasHiddenCases);
+      casesMoreButton.hidden = !hasHiddenCases;
+    };
+
+    updateCasesButtonVisibility();
+
+    casesMoreButton.addEventListener('click', () => {
+      getHiddenCases().forEach((card) => {
+        card.classList.remove('case-card--is-hidden');
+        card.hidden = false;
+        card.removeAttribute('data-cases-card-hidden');
+      });
+      updateCasesButtonVisibility();
+    });
+  }
   document.querySelectorAll('[data-lang-toggle]').forEach((toggle) => {
     toggle.addEventListener('click', () => {
       const isDeu = toggle.classList.toggle('is-deu');

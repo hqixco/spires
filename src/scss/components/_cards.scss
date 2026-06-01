@@ -184,6 +184,10 @@
 }
 
 @media (max-width: 720px) {
+  .site-map-card--desktop-ready {
+    display: none;
+  }
+
   .site-map-card--desktop-ready::after {
     display: none;
   }

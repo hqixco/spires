@@ -16,7 +16,7 @@ const pageEntries = [
   'articles',
   'article-inversion-sanitation',
   'cases',
-  'case-hamburg',
+  'case-detail',
   'privacy-policy',
   '404',
   'in-development',

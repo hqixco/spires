@@ -23,13 +23,20 @@
 
           <div class="in-development-page__visual" aria-hidden="true">
             <div class="in-development-page__visual-frame">
-              <div class="in-development-page__visual-core"></div>
+              <img
+                class="in-development-page__visual-image"
+                src="/src/images/in-development-visual-frame.jpg"
+                alt=""
+                aria-hidden="true"
+                loading="lazy"
+                decoding="async"
+              />
             </div>
           </div>
         </div>
       </section>
 
-      <div data-include="/src/partials/application.html"></div>
+      <div data-include="/src/partials/application.html" data-include-class="in-development-application-section"></div>
     </main>
     <div data-include="/src/partials/footer.html"></div>
     <script type="module" src="/src/js/main.js"></script>
