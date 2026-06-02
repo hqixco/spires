@@ -17,6 +17,22 @@ export function initMenu() {
     link.addEventListener('click', () => setState(false));
   });
 
+  const langToggles = [...document.querySelectorAll('[data-lang-toggle]')];
+  if (langToggles.length > 0) {
+    const syncLangState = (isDeu) => {
+      langToggles.forEach((langToggle) => {
+        langToggle.classList.toggle('is-deu', isDeu);
+        langToggle.setAttribute('aria-pressed', String(isDeu));
+      });
+    };
+
+    langToggles.forEach((langToggle) => {
+      langToggle.addEventListener('click', () => {
+        syncLangState(!langToggle.classList.contains('is-deu'));
+      });
+    });
+  }
+
   document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape') setState(false);
   });

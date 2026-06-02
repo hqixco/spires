@@ -146,12 +146,6 @@ async function bootstrap() {
       updateCasesButtonVisibility();
     });
   }
-  document.querySelectorAll('[data-lang-toggle]').forEach((toggle) => {
-    toggle.addEventListener('click', () => {
-      const isDeu = toggle.classList.toggle('is-deu');
-      toggle.setAttribute('aria-pressed', String(isDeu));
-    });
-  });
   initMenu();
   initFaq();
   initSliders();

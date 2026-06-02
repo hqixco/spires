@@ -103,7 +103,8 @@
 }
 
 .application-section__copy .section-text {
-  width: 570px;
+  width: auto;
+  max-width: 100%;
   font-size: 16px;
   line-height: 1.24;
   color: rgba(255, 255, 255, 0.9);
@@ -206,6 +207,42 @@
 @media (max-width: 1200px) {
   .application-section__inner {
     grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 28px 24px;
+  }
+
+  .application-section__copy {
+    height: auto;
+    gap: 8px;
+  }
+
+  .application-section__copy .section-title {
+    font-size: clamp(2rem, 3.2vw, 2.7rem);
+    line-height: 1;
+  }
+
+  .application-section__copy .section-text {
+    width: auto;
+    max-width: 100%;
+  }
+
+  .application-section__contacts {
+    margin-top: 6px;
+    gap: 8px;
+  }
+
+  .application-section .contact-form {
+    gap: 16px;
+  }
+
+  .application-section .contact-form input:not([type='checkbox']),
+  .application-section .contact-form textarea {
+    min-height: 46px;
+    padding: 6px 16px;
+  }
+
+  .application-section .contact-form .button {
+    min-height: 52px;
   }
 }
 
@@ -215,14 +252,120 @@
   }
 
   .application-section__inner {
+    gap: 16px;
     padding: 18px;
   }
 
   .application-section__copy {
     padding: 0;
+    gap: 6px;
+  }
+
+  .application-section__copy .section-title {
+    font-size: 2rem;
+    line-height: 1;
+  }
+
+  .application-section__copy .section-text {
+    font-size: 15px;
+    line-height: 1.34;
   }
 
   .application-section__contacts {
-    margin-top: 10px;
+    margin-top: 8px;
+    gap: 8px;
+  }
+
+  .application-section__contacts a {
+    min-height: 40px;
+    line-height: 40px;
+    padding: 0 16px;
+    font-size: 14px;
+  }
+
+  .application-section .contact-form {
+    gap: 14px;
+  }
+
+  .application-section .contact-form label {
+    gap: 8px;
+  }
+
+  .application-section .contact-form input:not([type='checkbox']),
+  .application-section .contact-form textarea {
+    min-height: 44px;
+    padding: 6px 14px;
+    font-size: 15px;
+  }
+
+  .application-section .contact-form .button {
+    min-height: 48px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .application-section__inner {
+    gap: 12px;
+    padding: 14px;
+  }
+
+  .application-section__copy {
+    gap: 6px;
+  }
+
+  .application-section__copy .section-label {
+    font-size: 13px;
+  }
+
+  .application-section__copy .section-title {
+    font-size: clamp(1.75rem, 8vw, 2rem);
+  }
+
+  .application-section__copy .section-text {
+    font-size: 14px;
+    line-height: 1.3;
+  }
+
+  .application-section__contacts {
+    margin-top: 6px;
+    gap: 6px;
+  }
+
+  .application-section__contacts a {
+    width: 100%;
+    justify-content: center;
+    min-height: 38px;
+    line-height: 38px;
+    padding: 0 14px;
+    font-size: 13px;
+  }
+
+  .application-section__contacts a::before {
+    width: 20px;
+    height: 20px;
+    margin-right: 6px;
+    background-size: 20px 20px;
+  }
+
+  .application-section .contact-form {
+    gap: 12px;
+  }
+
+  .application-section .contact-form label {
+    gap: 6px;
+    font-size: 0.62rem;
+  }
+
+  .application-section .contact-form input:not([type='checkbox']),
+  .application-section .contact-form textarea {
+    min-height: 42px;
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+
+  .application-section .contact-form .button {
+    min-height: 44px;
+    font-size: 14px;
   }
 }

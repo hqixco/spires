@@ -43,4 +43,10 @@
     min-height: 52px;
     padding: 16px 24px;
   }
+
+  .button--primary,
+  .button--secondary {
+    height: 40px;
+    min-height: auto;
+  }
 }

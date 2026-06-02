@@ -4,12 +4,13 @@
 
 .site-footer__inner {
   display: grid;
-  grid-template-columns: minmax(0, auto) minmax(0, 1fr) minmax(0, auto);
+  grid-template-columns: minmax(0, auto) minmax(0, 45%) minmax(0, auto);
   gap: 26px;
   align-items: center;
 }
 
 .site-footer__nav {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -117,6 +118,7 @@
   .site-footer__inner,
   .site-footer__bottom {
     grid-template-columns: 1fr;
+    gap: 18px;
   }
 
   .site-footer__meta {
@@ -130,24 +132,132 @@
   .site-footer__credit {
     justify-self: start;
   }
+
+  .site-footer__nav {
+    max-width: 56rem;
+    justify-content: flex-start;
+    gap: 10px 24px;
+    font-size: 16px;
+  }
+
+  .site-footer__brand {
+    width: 168px;
+  }
+
+  .site-footer__legal {
+    gap: 10px 32px;
+  }
 }
 
 @media (max-width: 720px) {
   .site-footer {
-    padding: 8px 0 18px;
+    padding: 8px 0 16px;
   }
 
   .site-footer__inner {
-    gap: 14px;
-    padding-top: 10px;
+    gap: 12px;
+    padding-top: 8px;
+  }
+
+  .site-footer__brand {
+    width: 150px;
+  }
+
+  .site-footer__nav {
+    gap: 8px 18px;
+    font-size: 15px;
+    line-height: 1.25;
   }
 
   .site-footer__meta {
     gap: 8px;
   }
 
+  .site-footer__socials {
+    gap: 6px;
+  }
+
+  .site-footer__social {
+    width: 40px;
+    height: 40px;
+  }
+
+  .site-footer__social img {
+    width: 18px;
+    height: 18px;
+  }
+
   .site-footer__bottom {
-    margin-top: 8px;
+    gap: 10px 16px;
+    margin-top: 6px;
     padding-top: 10px;
+  }
+
+  .site-footer__legal {
+    gap: 8px 18px;
+    font-size: 13px;
+    line-height: 1.35;
+  }
+
+  .site-footer__credit {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-footer {
+    padding: 6px 0 14px;
+  }
+
+  .site-footer__inner {
+    gap: 10px;
+    padding-top: 6px;
+  }
+
+  .site-footer__brand {
+    width: 132px;
+  }
+
+  .site-footer__nav {
+    gap: 6px 12px;
+    font-size: 14px;
+  }
+
+  .site-footer__meta {
+    gap: 6px;
+  }
+
+  .site-footer__socials {
+    gap: 5px;
+  }
+
+  .site-footer__social {
+    width: 36px;
+    height: 36px;
+  }
+
+  .site-footer__social img {
+    width: 16px;
+    height: 16px;
+  }
+
+  .site-footer__bottom {
+    gap: 8px 12px;
+    margin-top: 4px;
+    padding-top: 8px;
+  }
+
+  .site-footer__legal {
+    gap: 6px 12px;
+    font-size: 12px;
+  }
+
+  .site-footer__credit {
+    font-size: 12px;
+  }
+
+  .site-footer__credit img {
+    width: 36px;
+    height: 13px;
   }
 }
