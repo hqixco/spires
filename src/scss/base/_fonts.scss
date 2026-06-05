@@ -1,3 +1,13 @@
+@font-face {
+  font-family: 'Bebas Neue Cyrillic';
+  src:
+    url('/src/fonts/BebasNeueBold.woff') format('woff'),
+    url('/src/fonts/BebasNeueBold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
 body {
   font-family: var(--font-body);
 }

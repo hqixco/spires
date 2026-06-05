@@ -342,6 +342,9 @@ export function initSliders() {
     const getMaxIndex = () => Math.max(0, slides.length - 1);
 
     const clampIndex = (index) => Math.max(0, Math.min(getMaxIndex(), index));
+    const isInteractiveTarget = (target) =>
+      target instanceof Element &&
+      Boolean(target.closest('button, a, input, textarea, select, label, [role="button"]'));
 
     const applyTransform = (index, { animate = true, offset = 0 } = {}) => {
       const slide = slides[clampIndex(index)];
@@ -407,6 +410,7 @@ export function initSliders() {
 
     track.addEventListener('pointerdown', (event) => {
       if (event.button !== 0 && event.pointerType === 'mouse') return;
+      if (isInteractiveTarget(event.target)) return;
 
       isDragging = true;
       hasDragged = false;
