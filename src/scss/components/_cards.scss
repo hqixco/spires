@@ -239,6 +239,28 @@
   }
 }
 
+@media (max-width: 480px) {
+  .site-map-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .site-map-card {
+    min-height: 64px;
+    padding: 20px 10px 10px;
+    font-size: 0.74rem;
+    line-height: 1.15;
+  }
+
+  .site-map-card--desktop-ready::after,
+  .site-map-card--full-ready::after {
+    top: 6px;
+    right: 6px;
+    padding: 2px 5px;
+    font-size: 0.45rem;
+  }
+}
+
 @media (max-width: 1200px) {
   .info-grid--2,
   .info-grid--3,

@@ -116,6 +116,106 @@
   background: #fff;
 }
 
+@media (max-width: 1700px) {
+  .privacy-policy-page__hero {
+    padding-top: 26px;
+    padding-bottom: 10px;
+  }
+
+  .privacy-policy-page__hero-inner {
+    gap: 12px;
+  }
+
+  .privacy-policy-page__title {
+    font-size: clamp(2.75rem, 4vw, 3.8rem);
+    margin-bottom: 10px;
+  }
+
+  .privacy-policy-page__intro {
+    max-width: 70rem;
+    font-size: 0.95rem;
+    margin-bottom: 16px;
+  }
+
+  .privacy-policy-page__section {
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+
+  .privacy-policy-page__prose {
+    gap: 10px;
+    max-width: 1000px;
+  }
+
+  .privacy-policy-page__prose h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+
+  .privacy-policy-page__prose h3 {
+    margin-top: 20px;
+    font-size: 22px;
+  }
+
+  .privacy-policy-page__prose p,
+  .privacy-policy-page__list li {
+    font-size: 0.94rem;
+  }
+
+  .privacy-policy-page__list {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .privacy-policy-page__hero {
+    padding-top: 22px;
+  }
+
+  .privacy-policy-page__hero-inner {
+    gap: 10px;
+  }
+
+  .privacy-policy-page__title {
+    font-size: 2.8rem;
+  }
+
+  .privacy-policy-page__intro {
+    max-width: 100%;
+    font-size: 0.92rem;
+    margin-bottom: 14px;
+  }
+
+  .privacy-policy-page__section {
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+
+  .privacy-policy-page__section + .application-section {
+    padding-top: 56px;
+  }
+
+  .privacy-policy-page__prose {
+    max-width: 100%;
+    gap: 10px;
+  }
+
+  .privacy-policy-page__prose h2 {
+    font-size: 24px;
+  }
+
+  .privacy-policy-page__prose h3 {
+    margin-top: 18px;
+    font-size: 20px;
+  }
+
+  .privacy-policy-page__prose p,
+  .privacy-policy-page__list li {
+    font-size: 0.92rem;
+    line-height: 1.28;
+  }
+}
+
 .not-found-page .site-header {
   position: sticky;
 }
@@ -202,6 +302,103 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
+}
+
+@media (max-width: 1700px) {
+  .not-found-page .section-block {
+    padding-bottom: 36px;
+  }
+
+  .not-found-page__hero {
+    padding-top: 16px;
+  }
+
+  .not-found-page__hero-grid {
+    grid-template-columns: minmax(0, 1fr) 620px;
+    gap: 16px;
+  }
+
+  .not-found-page__panel,
+  .not-found-page__visual {
+    min-height: 440px;
+    border-radius: 20px;
+  }
+
+  .not-found-page__panel {
+    padding: 88px 52px;
+  }
+
+  .not-found-page__code {
+    margin-bottom: 18px;
+    font-size: 110px;
+  }
+
+  .not-found-page__text {
+    font-size: 18px;
+  }
+
+  .not-found-page__actions {
+    gap: 16px;
+    margin-top: 32px;
+  }
+
+  .not-found-page__actions .button {
+    min-width: 180px;
+    height: 56px;
+  }
+
+  .not-found-page__actions .button--secondary {
+    min-width: 280px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .not-found-page .section-block {
+    padding-bottom: 30px;
+  }
+
+  .not-found-page__hero {
+    padding-top: 14px;
+  }
+
+  .not-found-page__hero-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .not-found-page__panel,
+  .not-found-page__visual {
+    min-height: 0;
+    border-radius: 18px;
+  }
+
+  .not-found-page__panel {
+    padding: 48px 32px;
+  }
+
+  .not-found-page__code {
+    margin-bottom: 16px;
+    font-size: 96px;
+  }
+
+  .not-found-page__text {
+    font-size: 17px;
+  }
+
+  .not-found-page__actions {
+    gap: 12px;
+    margin-top: 28px;
+  }
+
+  .not-found-page__actions .button,
+  .not-found-page__actions .button--secondary {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .not-found-page__visual {
+    min-height: 360px;
+  }
 }
 
 .not-found-page__visual::before {
@@ -471,6 +668,131 @@
   object-position: center;
 }
 
+@media (max-width: 1700px) {
+  .in-development-page__hero {
+    padding-top: 26px;
+    padding-bottom: 24px;
+  }
+
+  .in-development-page__hero-grid {
+    grid-template-columns: minmax(0, 1fr) 620px;
+    gap: 16px;
+  }
+
+  .in-development-page__panel {
+    min-height: 100%;
+    padding: 96px 52px;
+  }
+
+  .in-development-page__title {
+    font-size: clamp(3rem, 4vw, 4rem);
+    margin-bottom: 18px;
+  }
+
+  .in-development-page__text {
+    font-size: 18px;
+  }
+
+  .in-development-page__actions {
+    gap: 16px;
+    margin-top: 32px;
+  }
+
+  .in-development-page__actions .button,
+  .in-development-page__actions .button--secondary {
+    min-height: 56px;
+  }
+
+  .in-development-page__visual,
+  .in-development-page__visual-frame {
+    min-height: 440px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .in-development-page__hero {
+    padding-top: 22px;
+    padding-bottom: 20px;
+  }
+
+  .in-development-page__hero-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .in-development-page__panel {
+    padding: 48px 32px;
+  }
+
+  .in-development-page__title {
+    font-size: 2.8rem;
+    margin-bottom: 16px;
+  }
+
+  .in-development-page__text {
+    font-size: 17px;
+  }
+
+  .in-development-page__actions {
+    gap: 12px;
+    margin-top: 28px;
+  }
+
+  .in-development-page__actions .button,
+  .in-development-page__actions .button--secondary {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .in-development-page__visual,
+  .in-development-page__visual-frame {
+    min-height: 360px;
+  }
+}
+
+@media (max-width: 480px) {
+  .in-development-page__hero {
+    padding-top: 18px;
+    padding-bottom: 14px;
+  }
+
+  .in-development-page__hero-grid {
+    gap: 10px;
+  }
+
+  .in-development-page__panel {
+    padding: 28px 18px;
+    border-radius: 18px;
+  }
+
+  .in-development-page__title {
+    font-size: 28px;
+    line-height: 1;
+    margin-bottom: 12px;
+  }
+
+  .in-development-page__text {
+    font-size: 14px;
+    line-height: 1.24;
+  }
+
+  .in-development-page__actions {
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .in-development-page__actions .button,
+  .in-development-page__actions .button--secondary {
+    min-height: 44px;
+    height: 44px;
+  }
+
+  .in-development-page__visual,
+  .in-development-page__visual-frame {
+    min-height: 240px;
+  }
+}
+
 .coming-soon-page {
   min-height: 100vh;
   overflow: hidden;
@@ -592,6 +914,211 @@
   object-position: center;
 }
 
+@media (max-width: 1700px) {
+  .coming-soon-page__canvas {
+    padding: 30px 60px 34px;
+  }
+
+  .coming-soon-page__brand {
+    left: 60px;
+    top: 30px;
+    width: 220px;
+  }
+
+  .coming-soon-page__brand .brand__image {
+    width: 220px;
+  }
+
+  .coming-soon-page__panel {
+    width: min(980px, calc(100vw - 120px));
+    padding: 108px 52px;
+  }
+
+  .coming-soon-page__title {
+    font-size: clamp(3rem, 4vw, 4rem);
+    margin-bottom: 32px;
+  }
+
+  .coming-soon-page__lead,
+  .coming-soon-page__text,
+  .coming-soon-page__contact-name,
+  .coming-soon-page__contact-role,
+  .coming-soon-page__contact-phone,
+  .coming-soon-page__contact-email {
+    font-size: 18px;
+  }
+
+  .coming-soon-page__contacts {
+    margin-top: 34px;
+  }
+
+  .coming-soon-page__contacts-title {
+    font-size: 28px;
+    margin-bottom: 12px;
+  }
+
+  .coming-soon-page__contacts-grid {
+    gap: 42px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .coming-soon-page__canvas {
+    padding: 26px 36px 30px;
+  }
+
+  .coming-soon-page__brand {
+    left: 36px;
+    top: 26px;
+    width: 200px;
+  }
+
+  .coming-soon-page__brand .brand__image {
+    width: 200px;
+  }
+
+  .coming-soon-page__panel {
+    width: 100%;
+    padding: 72px 40px 40px;
+  }
+
+  .coming-soon-page__title {
+    font-size: 2.8rem;
+    margin-bottom: 26px;
+  }
+
+  .coming-soon-page__lead,
+  .coming-soon-page__text,
+  .coming-soon-page__contact-name,
+  .coming-soon-page__contact-role,
+  .coming-soon-page__contact-phone,
+  .coming-soon-page__contact-email {
+    font-size: 17px;
+  }
+
+  .coming-soon-page__contacts {
+    margin-top: 30px;
+  }
+
+  .coming-soon-page__contacts-title {
+    font-size: 24px;
+  }
+
+  .coming-soon-page__contacts-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 720px) {
+  .coming-soon-page__canvas {
+    padding: 20px 18px 24px;
+  }
+
+  .coming-soon-page__brand {
+    left: 18px;
+    top: 18px;
+    width: 240px;
+  }
+
+  .coming-soon-page__brand .brand__image {
+    width: 240px;
+  }
+
+  .coming-soon-page__panel {
+    width: 100%;
+    padding: 88px 22px 30px;
+    border-radius: 18px;
+  }
+
+  .coming-soon-page__title {
+    font-size: 2.6rem;
+    margin-bottom: 22px;
+  }
+
+  .coming-soon-page__lead,
+  .coming-soon-page__text,
+  .coming-soon-page__contact-name,
+  .coming-soon-page__contact-role,
+  .coming-soon-page__contact-phone,
+  .coming-soon-page__contact-email {
+    font-size: 15px;
+    line-height: 1.22;
+  }
+
+  .coming-soon-page__contacts {
+    margin-top: 24px;
+  }
+
+  .coming-soon-page__contacts-title {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  .coming-soon-page__contacts-grid {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .coming-soon-page__canvas {
+    padding: 16px 14px 18px;
+  }
+
+  .coming-soon-page__brand {
+    left: 14px;
+    top: 14px;
+    width: 190px;
+  }
+
+  .coming-soon-page__brand .brand__image {
+    width: 105px;
+  }
+
+  .coming-soon-page__panel {
+    width: 100%;
+    padding: 76px 16px 24px;
+    border-radius: 16px;
+  }
+
+  .coming-soon-page__title {
+    font-size: 28px;
+    line-height: 1;
+    margin-bottom: 18px;
+  }
+
+  .coming-soon-page__lead,
+  .coming-soon-page__text,
+  .coming-soon-page__contact-name,
+  .coming-soon-page__contact-role,
+  .coming-soon-page__contact-phone,
+  .coming-soon-page__contact-email {
+    font-size: 14px;
+    line-height: 1.2;
+  }
+
+  .coming-soon-page__text {
+    margin-top: 8px;
+  }
+
+  .coming-soon-page__contacts {
+    margin-top: 20px;
+  }
+
+  .coming-soon-page__contacts-title {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+
+  .coming-soon-page__contact-group {
+    gap: 6px;
+  }
+
+  .coming-soon-page__contacts-grid {
+    gap: 10px;
+  }
+}
+
 @media (max-width: 1200px) {
   .coming-soon-page__panel {
     width: 100%;
@@ -603,6 +1130,53 @@
 }
 
 @media (max-width: 720px) {
+  .not-found-page .section-block {
+    padding-top: 18px;
+    padding-bottom: 24px;
+  }
+
+  .not-found-page__hero {
+    padding-top: 12px;
+  }
+
+  .not-found-page__hero-grid {
+    gap: 12px;
+  }
+
+  .not-found-page__panel,
+  .not-found-page__visual {
+    min-height: 260px;
+    border-radius: 18px;
+  }
+
+  .not-found-page__panel {
+    padding: 24px 18px 20px;
+  }
+
+  .not-found-page__code {
+    margin-bottom: 16px;
+    font-size: 4rem;
+  }
+
+  .not-found-page__text {
+    font-size: 0.96rem;
+  }
+
+  .not-found-page__actions {
+    gap: 12px;
+    margin-top: 24px;
+  }
+
+  .not-found-page__actions .button,
+  .not-found-page__actions .button--secondary {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .not-found-page__visual {
+    min-height: 260px;
+  }
+
   .coming-soon-page__canvas {
     padding: 20px 18px 24px;
   }
@@ -624,13 +1198,120 @@
   }
 }
 
+@media (max-width: 480px) {
+  .not-found-page .section-block {
+    padding-top: 14px;
+    padding-bottom: 20px;
+  }
+
+  .not-found-page__hero {
+    padding-top: 10px;
+  }
+
+  .not-found-page__hero-grid {
+    gap: 10px;
+  }
+
+  .not-found-page__panel,
+  .not-found-page__visual {
+    min-height: 240px;
+    border-radius: 16px;
+  }
+
+  .not-found-page__panel {
+    padding: 20px 16px 18px;
+  }
+
+  .not-found-page__code {
+    margin-bottom: 12px;
+    font-size: 72px;
+  }
+
+  .not-found-page__text {
+    font-size: 14px;
+    line-height: 1.24;
+  }
+
+  .not-found-page__actions {
+    gap: 10px;
+    margin-top: 18px;
+  }
+
+  .not-found-page__actions .button,
+  .not-found-page__actions .button--secondary {
+    min-height: 44px;
+    height: 44px;
+  }
+
+  .not-found-page__visual {
+    min-height: 240px;
+  }
+}
+
 @media (max-width: 720px) {
   .privacy-policy-page__hero {
     padding-top: 22px;
+    padding-bottom: 8px;
+  }
+
+  .privacy-policy-page__hero-inner {
+    gap: 8px;
   }
 
   .privacy-policy-page__title {
     font-size: 2.6rem;
+    line-height: 1;
+    margin-bottom: 0;
+  }
+
+  .privacy-policy-page__intro {
+    font-size: 0.9rem;
+    line-height: 1.28;
+    margin-bottom: 12px;
+  }
+
+  .privacy-policy-page__section {
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+
+  .privacy-policy-page__section + .application-section {
+    padding-top: 42px;
+  }
+
+  .privacy-policy-page__prose {
+    gap: 8px;
+  }
+
+  .privacy-policy-page__prose h2 {
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+
+  .privacy-policy-page__prose h3 {
+    margin-top: 16px;
+    font-size: 18px;
+  }
+
+  .privacy-policy-page__prose p,
+  .privacy-policy-page__list li {
+    font-size: 0.9rem;
+    line-height: 1.28;
+  }
+
+  .privacy-policy-page__list {
+    gap: 10px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+
+  .privacy-policy-page__list li {
+    padding-left: 20px;
+  }
+
+  .privacy-policy-page__list li::before {
+    width: 10px;
+    height: 10px;
   }
 
   .in-development-page__hero {
@@ -703,5 +1384,95 @@
   .not-found-page__actions .button--secondary {
     width: 100%;
     min-width: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .privacy-policy-page__hero {
+    padding-top: 18px;
+    padding-bottom: 6px;
+  }
+
+  .privacy-policy-page__hero-inner {
+    gap: 6px;
+  }
+
+  .privacy-policy-page__title {
+    font-size: 28px;
+    margin-bottom: 0;
+  }
+
+  .privacy-policy-page__intro {
+    font-size: 14px;
+    line-height: 1.24;
+    margin-bottom: 10px;
+  }
+
+  .privacy-policy-page__section {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .privacy-policy-page__section + .application-section {
+    padding-top: 32px;
+  }
+
+  .privacy-policy-page__prose {
+    gap: 8px;
+  }
+
+  .privacy-policy-page__prose h2 {
+    font-size: 20px;
+  }
+
+  .privacy-policy-page__prose h3 {
+    margin-top: 14px;
+    font-size: 16px;
+  }
+
+  .privacy-policy-page__prose p {
+    font-size: 14px;
+    line-height: 1.24;
+  }
+
+  .privacy-policy-page__list {
+    gap: 8px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .privacy-policy-page__list li {
+    padding-left: 16px;
+    font-size: 13px;
+    line-height: 1.22;
+  }
+
+  .privacy-policy-page__list li::before {
+    width: 8px;
+    height: 8px;
+    top: 0.36em;
+  }
+
+  .in-development-page__title {
+    font-size: 24px;
+  }
+
+  .in-development-page__actions .button, .in-development-page__actions .button--secondary {
+    font-size: 14px;
+    min-height: 35px;
+  }
+
+  .coming-soon-page__title {
+    font-size: 24px;
+    margin-bottom: 5px;
+  }
+
+  .not-found-page__actions .button, .not-found-page__actions .button--secondary {
+    font-size: 14px;
+  }
+
+  .not-found-page__code {
+    font-size: 24px;
+    margin-bottom: 10px;
   }
 }

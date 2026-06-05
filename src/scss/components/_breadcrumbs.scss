@@ -27,3 +27,11 @@
 .breadcrumbs a {
   color: var(--color-dark-blue);
 }
+
+@media (max-width: 480px) {
+  
+
+.breadcrumbs {
+    font-size: 12px;
+  }
+}

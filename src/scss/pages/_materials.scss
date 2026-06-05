@@ -145,6 +145,33 @@
   outline-offset: 3px;
 }
 
+@media (max-width: 1700px) {
+  .materials-liners-page__catalog {
+    padding-top: 28px;
+  }
+
+  .materials-liners-page__grid {
+    gap: 16px;
+  }
+
+  .materials-card {
+    min-height: 404px;
+    padding: 18px;
+  }
+
+  .materials-card__image {
+    min-height: 150px;
+  }
+
+  .materials-card__title {
+    font-size: 22px;
+  }
+
+  .materials-card__text {
+    font-size: 17px;
+  }
+}
+
 .materials-consumables-page__hero {
   padding-top: 65px;
   padding-bottom: 28px;
@@ -279,6 +306,34 @@
 .materials-consumables-card--link:focus-within {
   outline: 2px solid #ff9900;
   outline-offset: 3px;
+}
+
+@media (max-width: 1700px) {
+  .materials-consumables-page__catalog {
+    padding-top: 28px;
+  }
+
+
+  .materials-consumables-page__grid {
+    gap: 16px;
+  }
+
+  .materials-consumables-card {
+    min-height: 276px;
+    padding: 18px;
+  }
+
+  .materials-consumables-card__image {
+    min-height: 138px;
+  }
+
+  .materials-consumables-card__title {
+    font-size: 30px;
+  }
+
+  .materials-consumables-card__text {
+    font-size: 17px;
+  }
 }
 
 .materials-detail-page__hero {
@@ -483,22 +538,243 @@
   border-right: 1px solid rgba(0, 62, 96, 0.06);
 }
 
+@media (max-width: 1700px) {
+  .materials-detail-page__hero {
+    padding-top: 26px;
+    padding-bottom: 52px;
+  }
+
+  .materials-detail-page__hero-grid {
+    grid-template-columns: minmax(0, 42%) minmax(0, 58%);
+    gap: 18px;
+  }
+
+  .materials-detail-page__visual {
+    min-height: 560px;
+  }
+
+  .materials-detail-page__visual-shell {
+    min-height: 560px;
+    border-radius: 24px;
+  }
+
+  .materials-detail-page__content {
+    padding-top: 28px;
+  }
+
+  .materials-detail-page__title {
+    font-size: 58px;
+  }
+
+  .materials-detail-page__section-label {
+    font-size: 23px;
+  }
+}
+
 @media (max-width: 1200px) {
+  .materials-detail-page__hero {
+    padding-top: 24px;
+    padding-bottom: 40px;
+  }
+
+  .materials-detail-page__hero-grid {
+    grid-template-columns: minmax(0, 45%) minmax(0, 55%);
+    gap: 16px;
+  }
+
+  .materials-detail-page__visual,
+  .materials-detail-page__visual-shell {
+    min-height: 500px;
+  }
+
+  .materials-detail-page__content {
+    padding-top: 14px;
+  }
+
+  .materials-detail-page__title {
+    max-width: 13ch;
+    font-size: 50px;
+  }
+
+  .materials-detail-page__lead {
+    font-size: 17px;
+  }
+
+  .materials-detail-page__section-label {
+    margin-top: 18px;
+    font-size: 22px;
+  }
+
+  .materials-detail-page__list {
+    gap: 12px;
+  }
+
+  .materials-detail-page__list li {
+    font-size: 16px;
+  }
+
+  .materials-detail-page__table-shell .specs-table {
+    width: 100%;
+    min-width: 0;
+    table-layout: auto;
+  }
+
+  .materials-detail-page__table-shell .specs-table tbody th,
+  .materials-detail-page__table-shell .specs-table tbody td {
+    width: 50%;
+  }
+
+  .materials-detail-page__table-shell .specs-table tbody th,
+  .materials-detail-page__table-shell .specs-table td {
+    font-size: 16px;
+  }
+
+  .materials-liners-page__catalog {
+    padding-top: 24px;
+  }
+
+  .materials-liners-page__title {
+    font-size: 56px;
+  }
+
+  .materials-liners-page__grid {
+    gap: 18px;
+  }
+
+  .materials-card {
+    min-height: auto;
+    padding: 16px;
+  }
+
+  .materials-card__image {
+    min-height: 144px;
+  }
+
+  .materials-card__title {
+    font-size: 20px;
+  }
+
+  .materials-card__text {
+    font-size: 16px;
+    margin-top: 0;
+  }
+
   .materials-catalog-page__grid,
   .materials-liners-page__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .materials-consumables-page__hero {
+    padding-top: 52px;
+    padding-bottom: 24px;
+  }
+
+  .materials-consumables-page__catalog {
+    padding-top: 24px;
+  }
+
+  .materials-consumables-page__title {
+    font-size: 56px;
+  }
+
   .materials-consumables-page__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .materials-consumables-card {
+    min-height: 0;
+    padding: 16px;
+  }
+
+  .materials-consumables-card__image {
+    min-height: 132px;
+  }
+
+  .materials-consumables-card__title {
+    font-size: 26px;
+  }
+
+  .materials-consumables-card__text {
+    font-size: 16px;
+  }
+
+  .materials-liners-page__hero {
+    padding-bottom: 0;
   }
 }
 
 @media (max-width: 720px) {
+  .materials-detail-page__hero {
+    padding-top: 20px;
+    padding-bottom: 32px;
+  }
+
+  .materials-detail-page__hero-grid {
+    gap: 14px;
+  }
+
+  .materials-detail-page__visual,
+  .materials-detail-page__visual-shell {
+    min-height: 320px;
+  }
+
+  .materials-detail-page__title {
+    max-width: 100%;
+    font-size: 42px;
+    line-height: 0.98;
+  }
+
+  .materials-detail-page__lead {
+    font-size: 16px;
+  }
+
+  .materials-detail-page__section-label {
+    margin-top: 18px;
+    font-size: 20px;
+  }
+
+  .materials-detail-page__list {
+    gap: 12px;
+    padding-top: 8px;
+  }
+
+  .materials-detail-page__list li {
+    padding-left: 20px;
+    font-size: 15px;
+  }
+
+  .materials-detail-page__list li::before {
+    width: 10px;
+    height: 10px;
+  }
+
+  .materials-detail-page__table-shell {
+    margin-top: 6px;
+  }
+
+  .materials-detail-page__table-shell .specs-table {
+    width: 100%;
+    min-width: 0;
+    table-layout: fixed;
+  }
+
+  .materials-detail-page__table-shell .specs-table tbody th,
+  .materials-detail-page__table-shell .specs-table tbody td {
+    width: 50%;
+  }
+
+  .materials-detail-page__table-shell .specs-table th,
+  .materials-detail-page__table-shell .specs-table td,
+  .materials-detail-page__table-shell .specs-table tbody th {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+
   .materials-catalog-page__hero,
   .materials-liners-page__hero {
     padding-top: 28px;
-    padding-bottom: 20px;
+    padding-bottom: 0;
   }
 
   .materials-catalog-page__title,
@@ -513,49 +789,243 @@
 
   .materials-card {
     min-height: 0;
+    gap: 14px;
+    padding: 14px;
+  }
+
+  .materials-card__image {
+    min-height: 126px;
+  }
+
+  .materials-card__title {
+    font-size: 18px;
+  }
+
+  .materials-card__text {
+    font-size: 15px;
+    line-height: 1.26;
+  }
+
+  .materials-card__button {
+    width: 100%;
   }
 
   .materials-consumables-page__hero {
-    padding-top: 28px;
+    padding-top: 40px;
     padding-bottom: 20px;
   }
 
+  .materials-consumables-page__catalog {
+    padding-top: 18px;
+  }
+
   .materials-consumables-page__title {
-    font-size: 2.6rem;
+    font-size: 42px;
+    line-height: 0.98;
   }
 
   .materials-consumables-page__grid {
     grid-template-columns: 1fr;
+    gap: 12px;
   }
 
   .materials-consumables-card {
     min-height: 0;
+    gap: 14px;
+    padding: 14px;
+  }
+
+  .materials-consumables-card__image {
+    min-height: 120px;
+  }
+
+  .materials-consumables-card__title {
+    font-size: 22px;
+  }
+
+  .materials-consumables-card__text {
+    font-size: 15px;
+    line-height: 1.26;
   }
 
   .materials-detail-page__hero {
-    padding-top: 24px;
-    padding-bottom: 28px;
+    padding-top: 16px;
+    padding-bottom: 22px;
   }
 
   .materials-detail-page__hero-grid {
-    grid-template-columns: 1fr;
+    gap: 12px;
   }
 
   .materials-detail-page__visual,
   .materials-detail-page__visual-shell {
-    min-height: 360px;
+    min-height: 240px;
   }
 
   .materials-detail-page__title {
-    max-width: 14ch;
-    font-size: 2.6rem;
+    font-size: 28px;
   }
 
   .materials-detail-page__lead {
-    font-size: 0.98rem;
+    font-size: 14px;
+    line-height: 1.28;
   }
 
-  .materials-detail-page__table-shell .specs-table {
-    min-width: 640px;
+  .materials-detail-page__section-label {
+    margin-top: 14px;
+    font-size: 18px;
+  }
+
+  .materials-detail-page__list {
+    gap: 10px;
+  }
+
+
+  .materials-detail-page__table-shell .specs-table th,
+  .materials-detail-page__table-shell .specs-table td,
+  .materials-detail-page__table-shell .specs-table tbody th {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .materials-detail-page__hero {
+    padding-top: 16px;
+    padding-bottom: 0;
+  }
+
+  .materials-detail-page__hero-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .materials-detail-page__visual,
+  .materials-detail-page__visual-shell {
+    min-height: 240px;
+  }
+
+  .materials-detail-page__content {
+    padding-top: 0;
+  }
+
+  .materials-detail-page__title {
+    font-size: 28px;
+    line-height: 1;
+    margin-bottom: 0;
+  }
+
+  .materials-detail-page__lead {
+    font-size: 14px;
+    line-height: 1.28;
+  }
+
+  .materials-detail-page__section-label {
+    margin-top: 14px;
+    font-size: 20px;
+  }
+
+  .materials-detail-page__list {
+    gap: 10px;
+  }
+
+  .materials-detail-page__list li {
+    padding-left: 18px;
+    font-size: 14px;
+  }
+
+
+
+  .materials-detail-page__table-shell .specs-table th,
+  .materials-detail-page__table-shell .specs-table td,
+  .materials-detail-page__table-shell .specs-table tbody th {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+
+  .materials-liners-page__hero {
+    padding-top: 20px;
+    padding-bottom: 0;
+  }
+
+  .materials-liners-page__catalog {
+    padding-top: 14px;
+    padding-bottom: 0;
+  }
+
+  .materials-liners-page__title {
+    font-size: 28px;
+  }
+
+  .materials-catalog-page .page-breadcrumbs {
+    padding-bottom: 0;
+  }
+
+  .materials-card {
+    gap: 12px;
+    padding: 12px;
+    border-radius: 16px;
+  }
+
+  .materials-card__image {
+    min-height: 108px;
+    border-radius: 8px;
+  }
+
+  .materials-card__title {
+    font-size: 18px;
+  }
+
+  .materials-card__button {
+    font-size: 14px;
+  }
+
+  .materials-card__text {
+    font-size: 13px;
+    line-height: 1.22;
+  }
+
+  .materials-card__button {
+    min-height: 40px;
+    padding: 0 18px;
+    width: 100%;
+  }
+
+  .materials-consumables-page__hero {
+    padding-top: 28px;
+    padding-bottom: 0px;
+  }
+
+  .materials-consumables-page__catalog {
+    padding-top: 14px;
+  }
+
+  .materials-consumables-page__title {
+    font-size: 28px;
+  }
+
+  .materials-consumables-card {
+    gap: 12px;
+    padding: 12px;
+    border-radius: 16px;
+  }
+
+  .materials-consumables-card__image {
+    min-height: 108px;
+    border-radius: 8px;
+  }
+
+  .materials-consumables-card__title {
+    font-size: 18px;
+  }
+
+  .materials-consumables-card__text {
+    font-size: 13px;
+    line-height: 1.22;
+    margin-top: -5px;
+  }
+
+  .materials-consumables-page__catalog {
+    padding-bottom: 10px;
   }
 }

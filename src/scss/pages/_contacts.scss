@@ -125,9 +125,98 @@
   object-fit: contain;
 }
 
+@media (max-width: 1700px) {
+  .contacts-detail-page__hero {
+    padding-top: 24px;
+    padding-bottom: 30px;
+  }
+
+  .contacts-detail-page__hero-grid {
+    grid-template-columns: minmax(0, 1fr) 720px;
+    gap: 20px;
+  }
+
+  .contacts-detail-page__content {
+    gap: 34px;
+    padding-top: 18px;
+  }
+
+  .contacts-detail-page__title {
+    font-size: clamp(2.8rem, 4vw, 3.7rem);
+  }
+
+  .contacts-detail-page__label {
+    font-size: 22px;
+  }
+
+  .contacts-detail-page__text {
+    font-size: 17px;
+  }
+
+  .contacts-detail-page__map {
+    min-height: 520px;
+  }
+
+  .contacts-detail-page__partners {
+    padding-top: 12px;
+    padding-bottom: 54px;
+  }
+
+  .contacts-detail-page__partners-panel {
+    padding: 34px;
+  }
+
+  .contacts-detail-page__eyebrow {
+    margin-bottom: 18px;
+  }
+
+  .contacts-detail-page__partners-title {
+    font-size: 36px;
+  }
+
+  .contacts-detail-page__partners-text {
+    margin-top: 18px;
+    margin-bottom: 32px;
+    font-size: 15px;
+  }
+
+  .contacts-detail-page__partners-grid {
+    gap: 16px;
+  }
+
+  .partner-logo {
+    min-height: 92px;
+    border-radius: 18px;
+  }
+}
+
 @media (max-width: 1200px) {
+  .contacts-detail-page__hero {
+    padding-top: 24px;
+    padding-bottom: 28px;
+  }
+
   .contacts-detail-page__hero-grid {
     grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .contacts-detail-page__content {
+    gap: 24px;
+    padding-top: 0;
+  }
+
+  .contacts-detail-page__title {
+    font-size: clamp(2.5rem, 5vw, 3.2rem);
+    margin-bottom: 0;
+  }
+
+  .contacts-detail-page__label {
+    font-size: 20px;
+  }
+
+  .contacts-detail-page__text {
+    font-size: 16px;
   }
 
   .contacts-detail-page__map {
@@ -136,6 +225,30 @@
 
   .contacts-detail-page__partners-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .contacts-detail-page__partners {
+    padding-top: 12px;
+    padding-bottom: 48px;
+  }
+
+  .contacts-detail-page__partners-panel {
+    padding: 26px;
+  }
+
+  .contacts-detail-page__eyebrow {
+    margin-bottom: 16px;
+  }
+
+  .contacts-detail-page__partners-title {
+    font-size: 32px;
+  }
+
+  .contacts-detail-page__partners-text {
+    margin-top: 16px;
+    margin-bottom: 28px;
+    font-size: 14px;
   }
 }
 
@@ -143,6 +256,10 @@
   .contacts-detail-page__hero {
     padding-top: 22px;
     padding-bottom: 28px;
+  }
+
+  .contacts-detail-page__hero-grid {
+    gap: 14px;
   }
 
   .contacts-detail-page__title {
@@ -163,6 +280,7 @@
 
   .contacts-detail-page__partners-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
   }
 
   .partner-logo {
@@ -173,5 +291,84 @@
   .partner-logo__image {
     width: 112px;
     height: 48px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contacts-detail-page__hero {
+    padding-top: 16px;
+    padding-bottom: 22px;
+  }
+
+  .contacts-detail-page__hero-grid {
+    gap: 12px;
+  }
+
+  .contacts-detail-page__title {
+    font-size: 28px;
+    line-height: 1;
+  }
+
+  .contacts-detail-page__content {
+    gap: 16px;
+  }
+
+  .contacts-detail-page__label {
+    font-size: 18px;
+  }
+
+  .contacts-detail-page__text {
+    font-size: 14px;
+    line-height: 1.24;
+  }
+
+  .contacts-detail-page__map {
+    min-height: 240px;
+  }
+
+  .contacts-detail-page__partners {
+    padding-top: 10px;
+    padding-bottom: 28px;
+  }
+
+  .contacts-detail-page__partners-panel {
+    padding: 14px;
+    border-radius: 16px;
+  }
+
+  .contacts-detail-page__eyebrow {
+    margin-bottom: 12px;
+  }
+
+  .contacts-detail-page__partners-title {
+    font-size: 24px;
+    line-height: 1;
+  }
+
+  .contacts-detail-page__partners-text {
+    margin-top: 12px;
+    margin-bottom: 20px;
+    font-size: 13px;
+    line-height: 1.24;
+  }
+
+  .contacts-detail-page__partners-grid {
+    gap: 10px;
+  }
+
+  .partner-logo {
+    min-height: 64px;
+    border-radius: 14px;
+    padding: 6px;
+  }
+
+  .partner-logo__image {
+    width: 100px;
+    height: 42px;
+  }
+
+
+  .contacts-detail-page__partners {
+    padding-bottom: 0;
   }
 }

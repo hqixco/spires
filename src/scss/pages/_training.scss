@@ -36,8 +36,7 @@
   color: #4a4a4a;
 }
 
-.training-detail-page__section-label,
-.training-detail-page__eyebrow {
+.training-detail-page__section-label {
   font-family: var(--font-heading);
   font-size:24px;
   font-weight: 800;
@@ -429,36 +428,426 @@
   margin-top: 2px;
 }
 
+@media (max-width: 1700px) {
+  .training-detail-page__hero {
+    padding-top: 42px;
+    padding-bottom: 66px;
+  }
+
+  .training-detail-page__hero-grid {
+    grid-template-columns: minmax(0, 44%) minmax(0, 56%);
+    gap: 20px;
+  }
+
+  .training-detail-page__content {
+    padding-top: 0;
+  }
+
+  .training-detail-page__title {
+    width: auto;
+    font-size: 48px;
+    margin-bottom: 0;
+  }
+
+  .training-detail-page__lead {
+    font-size: 17px;
+  }
+
+  .training-detail-page__section-label {
+    font-size: 22px;
+  }
+
+  .training-detail-page__list {
+    gap: 16px;
+  }
+
+  .training-detail-page__list li {
+    font-size: 17px;
+  }
+
+  .training-detail-page__button {
+    min-width: 300px;
+    height: 56px;
+  }
+
+  .training-detail-page__visual {
+    min-height: 380px;
+  }
+
+  .training-detail-page__visual-frame {
+    min-height: 540px;
+  }
+
+  .training-detail-page__formats {
+    padding-top: 8px;
+    padding-bottom: 32px;
+  }
+
+  .training-detail-page__formats-panel {
+    padding: 34px;
+  }
+
+  .training-detail-page__panel-title {
+    font-size: 36px;
+    margin-bottom: 18px;
+  }
+
+  .training-detail-page__panel-text {
+    font-size: 17px;
+    margin-bottom: 30px;
+  }
+
+  .training-detail-page__formats-grid {
+    gap: 8px;
+  }
+
+  .training-card {
+    min-height: 360px;
+    padding: 18px;
+  }
+
+  .training-card__index {
+    width: 36px;
+    height: 36px;
+    font-size: 15px;
+  }
+
+  .training-card__title {
+    font-size: 28px;
+    margin-top: 24px;
+  }
+
+  .training-card__text {
+    font-size: 15px;
+  }
+
+  .training-card__label {
+    font-size: 22px;
+  }
+
+  .training-detail-page__investment {
+    padding-top: 44px;
+    padding-bottom: 36px;
+  }
+
+  .training-detail-page__investment-header {
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+
+  .training-detail-page__investment-title {
+    font-size: 36px;
+  }
+
+  .training-detail-page__investment-text {
+    font-size: 17px;
+    margin-top: 10px;
+  }
+
+  .training-detail-page__benefits-grid {
+    gap: 16px;
+  }
+
+  .training-benefit {
+    min-height: 150px;
+    padding: 18px;
+  }
+
+  .training-benefit__title {
+    font-size: 22px;
+  }
+
+  .training-benefit__text {
+    font-size: 15px;
+  }
+
+  .training-detail-page__support {
+    padding-top: 40px;
+    padding-bottom: 54px;
+  }
+
+  .training-detail-page__support-grid {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: 16px;
+  }
+
+  .training-detail-page__support-copy {
+    gap: 10px;
+    padding-top: 2px;
+  }
+
+  .training-detail-page__support-title {
+    font-size: 36px;
+  }
+
+  .training-detail-page__support-text {
+    font-size: 17px;
+    max-width: 24rem;
+  }
+
+  .training-detail-page__support-grid-items {
+    gap: 16px;
+  }
+
+  .training-support-card {
+    min-height: 160px;
+    padding: 18px;
+  }
+
+  .training-support-card__index {
+    width: 36px;
+    height: 36px;
+    font-size: 15px;
+  }
+
+  .training-support-card__title {
+    margin-top: 18px;
+    font-size: 22px;
+  }
+
+  .training-support-card__text {
+    font-size: 15px;
+  }
+}
+
 @media (max-width: 1200px) {
+  .training-detail-page__hero {
+    padding-top: 34px;
+    padding-bottom: 54px;
+  }
+
   .training-detail-page__hero-grid,
   .training-detail-page__support-grid {
     grid-template-columns: 1fr;
   }
 
-  .training-detail-page__visual,
-  .training-detail-page__visual-frame {
-    min-height: 340px;
+  .training-detail-page__hero-grid {
+    gap: 18px;
   }
 
-  .training-detail-page__formats-grid,
-  .training-detail-page__benefits-grid,
+  .training-detail-page__content {
+    padding-top: 0;
+  }
+
+  .training-detail-page__title {
+    font-size: 52px;
+    margin-bottom: 12px;
+  }
+
+  .training-detail-page__lead {
+    font-size: 17px;
+  }
+
+  .training-detail-page__section-label {
+    font-size: 20px;
+  }
+
+  .training-detail-page__list {
+    gap: 14px;
+  }
+
+  .training-detail-page__list li {
+    font-size: 16px;
+  }
+
+  .training-detail-page__button {
+    min-width: 0;
+    width: 100%;
+    max-width: 320px;
+    height: 54px;
+  }
+
+  .training-detail-page__visual,
+  .training-detail-page__visual-frame {
+    min-height: 360px;
+  }
+
+  .training-detail-page__benefits-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .training-detail-page__support-grid-items {
     grid-template-columns: 1fr;
+  }
+
+  .training-detail-page__support {
+    padding-top: 34px;
+    padding-bottom: 44px;
+  }
+
+  .training-detail-page__support-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .training-detail-page__support-copy {
+    gap: 8px;
+    padding-top: 0;
+  }
+
+  .training-detail-page__support-title {
+    font-size: 32px;
+  }
+
+  .training-detail-page__support-text {
+    max-width: 100%;
+    font-size: 16px;
+  }
+
+  .training-detail-page__support-grid-items {
+    gap: 14px;
+  }
+
+  .training-support-card {
+    min-height: 150px;
+    padding: 16px;
+  }
+
+  .training-support-card__index {
+    width: 34px;
+    height: 34px;
+    font-size: 14px;
+  }
+
+  .training-support-card__title {
+    margin-top: 16px;
+    font-size: 20px;
+  }
+
+  .training-support-card__text {
+    font-size: 14px;
+  }
+
+  .training-detail-page__formats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .training-detail-page__formats-panel {
+    padding: 28px;
+  }
+
+  .training-detail-page__panel-title {
+    font-size: 32px;
+    margin-bottom: 16px;
+  }
+
+  .training-detail-page__panel-text {
+    font-size: 16px;
+    margin-bottom: 24px;
+  }
+
+  .training-card {
+    min-height: 320px;
+    padding: 16px;
+  }
+
+  .training-card__title {
+    font-size: 26px;
+    margin-top: 20px;
+  }
+
+  .training-card__label {
+    font-size: 20px;
+  }
+
+  .training-detail-page__investment {
+    padding-top: 36px;
+    padding-bottom: 30px;
+  }
+
+  .training-detail-page__investment-header {
+    margin-bottom: 14px;
+  }
+
+  .training-detail-page__investment-title {
+    font-size: 32px;
+  }
+
+  .training-detail-page__investment-text {
+    font-size: 16px;
+  }
+
+  .training-detail-page__benefits-grid {
+    gap: 14px;
+  }
+
+  .training-benefit {
+    min-height: 140px;
+    padding: 16px;
+  }
+
+  .training-benefit__title {
+    font-size: 20px;
+    margin-bottom: 6px;
+  }
+
+  .training-benefit__text {
+    font-size: 14px;
   }
 }
 
 @media (max-width: 720px) {
   .training-detail-page__hero {
     padding-top: 22px;
-    padding-bottom: 28px;
+    padding-bottom: 32px;
+  }
+
+  .training-detail-page__hero-grid {
+    gap: 14px;
+  }
+
+  .training-detail-page__visual,
+  .training-detail-page__visual-frame {
+    min-height: 300px;
   }
 
   .training-detail-page__title {
-    font-size: 2.6rem;
+    max-width: 100%;
+    font-size: 42px;
+    line-height: 0.98;
+    margin-bottom: 10px;
+  }
+
+  .training-detail-page__lead {
+    font-size: 15px;
+    line-height: 1.28;
+  }
+
+  .training-detail-page__section-label {
+    font-size: 20px;
+  }
+
+  .training-detail-page__list {
+    gap: 12px;
+  }
+
+  .training-detail-page__list li {
+    padding-left: 20px;
+    font-size: 15px;
+  }
+
+  .training-detail-page__list li::before {
+    width: 10px;
+    height: 10px;
   }
 
   .training-detail-page__formats-panel {
     padding: 16px;
+  }
+
+  .training-detail-page__formats-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .training-detail-page__panel-title {
+    font-size: 28px;
+    margin-bottom: 14px;
+  }
+
+  .training-detail-page__panel-text {
+    font-size: 15px;
+    margin-bottom: 20px;
   }
 
   .training-card,
@@ -467,14 +856,283 @@
     min-height: 0;
   }
 
+  .training-card {
+    padding: 14px;
+  }
+
+  .training-card__index {
+    width: 34px;
+    height: 34px;
+    font-size: 14px;
+  }
+
   .training-card__title,
   .training-benefit__title,
   .training-support-card__title {
     font-size: 1.05rem;
   }
 
+  .training-card__title {
+    margin-top: 18px;
+  }
+
+  .training-card__text {
+    font-size: 14px;
+  }
+
+  .training-card__label {
+    font-size: 18px;
+  }
+
+  .training-detail-page__investment {
+    padding-top: 28px;
+    padding-bottom: 24px;
+  }
+
+  .training-detail-page__investment-header {
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+
+  .training-detail-page__investment-title {
+    font-size: 28px;
+    line-height: 1;
+  }
+
+  .training-detail-page__investment-text {
+    font-size: 15px;
+    line-height: 1.26;
+  }
+
+  .training-detail-page__benefits-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .training-benefit {
+    min-height: 0;
+    padding: 14px;
+  }
+
+  .training-benefit__title {
+    font-size: 18px;
+    margin-bottom: 6px;
+  }
+
+  .training-benefit__text {
+    font-size: 13px;
+  }
+
+  .training-detail-page__support {
+    padding-top: 28px;
+    padding-bottom: 32px;
+  }
+
+  .training-detail-page__support-grid {
+    gap: 14px;
+  }
+
+  .training-detail-page__support-title {
+    font-size: 28px;
+    line-height: 1;
+  }
+
+  .training-detail-page__support-text {
+    font-size: 15px;
+    line-height: 1.26;
+  }
+
+  .training-detail-page__support-grid-items {
+    gap: 12px;
+  }
+
+  .training-support-card {
+    min-height: 0;
+    padding: 14px;
+  }
+
+  .training-support-card__index {
+    width: 32px;
+    height: 32px;
+    font-size: 13px;
+  }
+
+  .training-support-card__title {
+    margin-top: 14px;
+    font-size: 18px;
+  }
+
+  .training-support-card__text {
+    font-size: 13px;
+  }
+
   .training-detail-page__button {
     width: 100%;
     min-width: 0;
+    max-width: none;
+    height: 50px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .training-detail-page__hero {
+    padding-top: 16px;
+    padding-bottom: 24px;
+  }
+
+  .training-detail-page__hero-grid {
+    gap: 12px;
+  }
+
+  .training-detail-page__visual,
+  .training-detail-page__visual-frame {
+    min-height: 220px;
+  }
+
+  .training-detail-page__title {
+    font-size: 28px;
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+
+  .training-detail-page__lead {
+    font-size: 14px;
+    line-height: 1.26;
+  }
+
+  .training-detail-page__section-label {
+    font-size: 16px;
+  }
+
+  .training-detail-page__section-label {
+    font-size: 18px;
+  }
+
+  .training-detail-page__list {
+    gap: 10px;
+    padding-top: 2px;
+  }
+
+  .training-detail-page__list li {
+    padding-left: 18px;
+    font-size: 14px;
+  }
+
+  .training-detail-page__button {
+    height: 46px;
+    font-size: 14px;
+  }
+
+  .training-detail-page__formats {
+    padding-bottom: 24px;
+  }
+
+  .training-detail-page__formats-panel {
+    padding: 14px;
+  }
+
+  .training-detail-page__panel-title {
+    font-size: 24px;
+    margin-bottom: 12px;
+  }
+
+  .training-detail-page__panel-text {
+    font-size: 14px;
+    margin-bottom: 18px;
+  }
+
+  .training-card {
+    padding: 12px;
+    gap: 8px;
+  }
+
+  .training-card__index {
+    width: 30px;
+    height: 30px;
+    font-size: 13px;
+  }
+
+  .training-card__title {
+    font-size: 22px;
+    margin-top: 14px;
+  }
+
+  .training-card__text {
+    font-size: 13px;
+  }
+
+  .training-card__label {
+    font-size: 16px;
+  }
+
+  .training-detail-page__investment {
+    padding-top: 22px;
+    padding-bottom: 18px;
+  }
+
+  .training-detail-page__investment-header {
+    gap: 6px;
+    margin-bottom: 10px;
+  }
+
+  .training-detail-page__investment-title {
+    font-size: 24px;
+  }
+
+  .training-detail-page__investment-text {
+    font-size: 14px;
+  }
+
+  .training-benefit {
+    padding: 12px;
+  }
+
+  .training-benefit__title {
+    font-size: 16px;
+  }
+
+  .training-benefit__text {
+    font-size: 12px;
+  }
+
+  .training-detail-page__support {
+    padding-top: 22px;
+    padding-bottom: 24px;
+  }
+
+  .training-detail-page__support-copy {
+    gap: 6px;
+  }
+
+  .training-detail-page__support-title {
+    font-size: 24px;
+  }
+
+  .training-detail-page__support-text {
+    font-size: 14px;
+  }
+
+  .training-detail-page__support-grid-items {
+    gap: 10px;
+  }
+
+  .training-support-card {
+    padding: 12px;
+  }
+
+  .training-support-card__index {
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+  }
+
+  .training-support-card__title {
+    margin-top: 12px;
+    font-size: 16px;
+  }
+
+  .training-support-card__text {
+    font-size: 12px;
   }
 }
